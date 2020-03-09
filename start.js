@@ -1,10 +1,11 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect('mongodb+srv://elfurion:11teras11@sobakavkimono-d5zru.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
 
 mongoose.connection
     .on('open', () => {
